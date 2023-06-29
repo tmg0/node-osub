@@ -1,0 +1,7 @@
+version: '2.2'
+services:
+  node-osub:
+    image: node
+    volumes:
+      - ./package.json:/.output/package.json
+      - ./dist:/.output/dist

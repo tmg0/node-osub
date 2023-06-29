@@ -13,7 +13,7 @@ const main = async () => {
   }))).flat().map((server) => {
     if (isVmess(server)) { return parseVmess(server) }
     if (isShadowsocks(server)) { return parseShadowsocks(server) }
-    return ''
+    return undefined
   }).filter(Boolean)
 
   return servers

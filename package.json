@@ -2,9 +2,9 @@
   "name": "node-osub",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "bin": "dist/index.js",
   "scripts": {
-    "build": "tsup && pkg dist/index.mjs",
+    "build": "tsup && pkg . -t node16-linux-arm64 --out-path dist",
     "test": "vitest"
   },
   "repository": {
@@ -23,11 +23,13 @@
   },
   "homepage": "https://github.com/zekunjin/node-osub#readme",
   "dependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "c12": "^1.4.2",
     "ejs": "^3.1.9",
+    "ofetch": "^1.1.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.43.0",
-    "ofetch": "^1.1.1",
     "pkg": "^5.8.1",
     "tsup": "^7.1.0",
     "typescript": "^5.1.3",
